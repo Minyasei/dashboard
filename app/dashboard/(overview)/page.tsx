@@ -11,10 +11,12 @@ import {
 } from '@/app/ui/skeletons';
 import { Metadata } from 'next';
 
+//explain data with explanation
 export const metadata: Metadata = {
   title: 'Dashboard',
 };
 
+//fetchcarddata then consts
 export default async function Page() {
   const {
     numberOfInvoices,

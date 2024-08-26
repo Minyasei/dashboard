@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: 'Invoices',
 };
 
+// search feature for invoices
 export default async function Page({
   searchParams,
 }: {
@@ -34,6 +35,7 @@ export default async function Page({
         <Search placeholder='Search invoices...' />
         <CreateInvoice />
       </div>
+      {/* suspense -> temporary loading display help */}
       <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
         <Table query={query} currentPage={currentPage} />
       </Suspense>
